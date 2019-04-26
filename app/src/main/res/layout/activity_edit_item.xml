@@ -9,14 +9,12 @@
     android:paddingTop="16dp"
     tools:context="com.example.sharingapp.EditItemActivity"
     android:orientation="vertical">
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp">
-
         <TextView
             android:id="@+id/title_tv"
             android:layout_width="104dp"
@@ -24,7 +22,6 @@
             android:text="@string/title_hint"
             android:gravity="center_vertical"
             android:textAppearance="@android:style/TextAppearance.Medium" />
-
         <EditText
             android:id="@+id/title"
             android:layout_width="fill_parent"
@@ -33,16 +30,13 @@
             android:inputType="text"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24"/>
-
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
-
         <TextView
             android:id="@+id/maker_tv"
             android:layout_width="104dp"
@@ -50,7 +44,6 @@
             android:text="@string/maker_hint"
             android:gravity="center_vertical"
             android:textAppearance="@android:style/TextAppearance.Medium" />
-
         <EditText
             android:id="@+id/maker"
             android:layout_width="fill_parent"
@@ -59,16 +52,13 @@
             android:inputType="text"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24"/>
-
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
-
         <TextView
             android:id="@+id/description_tv"
             android:layout_width="104dp"
@@ -76,7 +66,6 @@
             android:text="@string/description_hint"
             android:gravity="center_vertical"
             android:textAppearance="@android:style/TextAppearance.Medium"/>
-
         <EditText
             android:id="@+id/description"
             android:layout_width="fill_parent"
@@ -85,16 +74,13 @@
             android:inputType="text"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24"/>
-
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
-
         <TextView
             android:id="@+id/dimensions_tv"
             android:layout_width="104dp"
@@ -102,7 +88,6 @@
             android:text="@string/dimensions_hint"
             android:gravity="center_vertical"
             android:textAppearance="@android:style/TextAppearance.Medium"/>
-
         <EditText
             android:id="@+id/length"
             android:layout_width="64dp"
@@ -111,7 +96,6 @@
             android:inputType="numberDecimal"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24"/>
-
         <EditText
             android:id="@+id/width"
             android:layout_width="64dp"
@@ -120,7 +104,6 @@
             android:inputType="numberDecimal"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24" />
-
         <EditText
             android:id="@+id/height"
             android:layout_width="64dp"
@@ -129,28 +112,37 @@
             android:inputType="numberDecimal"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:maxLength="24" />
-
     </LinearLayout>
-
-    <Switch
-        android:id="@+id/available_switch"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:checked="true"
-        android:showText="true"
-        android:onClick="toggleSwitch"
-        android:text="@string/status_hint"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textOff="@string/toggle_borrowed"
-        android:textOn="@string/toggle_available" />
-
+        android:layout_marginTop="5dp">
+        <Switch
+            android:id="@+id/available_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="toggleSwitch"
+            android:showText="true"
+            android:text="@string/status_hint"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textOff="@string/toggle_borrowed"
+            android:textOn="@string/toggle_available" />
+        <EditText
+            android:id="@+id/invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+    </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp">
-
         <TextView
             android:id="@+id/borrower_tv"
             android:layout_width="104dp"
@@ -158,18 +150,13 @@
             android:gravity="center_vertical"
             android:text="@string/borrower_hint"
             android:textAppearance="@android:style/TextAppearance.Medium"/>
-
-        <EditText
-            android:id="@+id/borrower"
-            android:layout_width="fill_parent"
+        <Spinner
+            android:id="@+id/borrower_spinner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/borrower_hint"
-            android:inputType="textPersonName"
-            android:textAppearance="@android:style/TextAppearance.Medium"
-            android:maxLength="24" />
-
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
     </LinearLayout>
-
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="fill_parent"
@@ -180,14 +167,12 @@
         android:layout_gravity="center_horizontal"
         android:background="@color/colorPrimary"
         android:label="@string/image_icon"/>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp">
-
         <ImageButton
             android:id="@+id/add_image_button"
             android:layout_width="48dp"
@@ -195,8 +180,6 @@
             android:onClick="addPhoto"
             android:layout_gravity="center"
             android:background="@android:drawable/ic_menu_camera" />
-
-
         <ImageButton
             android:id="@+id/cancel_image_button"
             android:layout_width="48dp"
@@ -204,7 +187,6 @@
             android:onClick="deletePhoto"
             android:layout_gravity="center"
             android:background="@android:drawable/ic_menu_close_clear_cancel" />
-
         <Button
             android:id="@+id/delete_item"
             android:layout_width="fill_parent"
@@ -214,16 +196,13 @@
             android:onClick="deleteItem"
             android:text="@string/delete_item"
             android:textAppearance="@android:style/TextAppearance.Medium"/>
-
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
-
         <Button
             android:id="@+id/save_button"
             android:layout_width="0dp"
@@ -233,6 +212,5 @@
             android:text="@string/save"
             android:layout_gravity="center_horizontal"
             android:textAppearance="@android:style/TextAppearance.Medium"/>
-
     </LinearLayout>
 </LinearLayout>

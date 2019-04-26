@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SharingApp.iml" filepath="$PROJECT_DIR$/SharingApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file:///media/abe/Shared/Learning/coursera/sharing-items/app/app.iml" filepath="/media/abe/Shared/Learning/coursera/sharing-items/app/app.iml" />
+      <module fileurl="file:///media/abe/Shared/Learning/coursera/sharing-items/sharing-items.iml" filepath="/media/abe/Shared/Learning/coursera/sharing-items/sharing-items.iml" />
     </modules>
   </component>
 </project>
